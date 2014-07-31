@@ -1,0 +1,305 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\camera.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON2               ICON    DISCARDABLE     "res\\d.ico"
+IDI_ICONMAIN            ICON    DISCARDABLE     "res\\Clock.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\Globe.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "手势识别"
+FONT 9, "宋体"
+BEGIN
+    ICON            128,IDC_STATIC,11,17,20,20
+    LTEXT           "手势识别 1.0 版 ",IDC_STATIC,40,10,98,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2012 李德果",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,34,50,14,WS_GROUP
+END
+
+IDD_CAMERA_DIALOG DIALOGEX 0, 0, 455, 223
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "手势识别 1.0"
+FONT 8, "微软雅黑", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "启动",IDC_BUTTON1,331,191,44,13
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,16,7,225,130
+    PUSHBUTTON      "视频抓取",IDC_BUTTON2,331,170,44,13,0,WS_EX_STATICEDGE
+    LTEXT           "版权所有 (C) 2012 李德果",IDC_STATIC,16,209,72,8
+    CTEXT           "识别结果",IDC_STATIC01,16,139,26,8
+    PUSHBUTTON      "发音",IDC_READ,390,150,44,13,0,WS_EX_STATICEDGE
+    CONTROL         140,IDC_STATIC1,"Static",SS_BITMAP,331,33,103,100
+    LTEXT           "当前手势",IDC_STATIC,332,19,26,8
+    LISTBOX         IDC_LISTRESULT,16,150,284,55,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "停止",IDC_BUTTON3,391,170,43,13
+    PUSHBUTTON      "静态手势",IDC_BUTTON4,331,150,45,11
+END
+
+IDD_HELP DIALOG DISCARDABLE  0, 0, 391, 227
+STYLE DS_MODALFRAME | DS_SETFOREGROUND | DS_CONTROL | WS_MINIMIZEBOX | 
+    WS_MAXIMIZEBOX | WS_CAPTION | WS_SYSMENU
+CAPTION "用户帮助"
+FONT 9, "微软雅黑"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,334,200,50,14
+    LTEXT           "2.   请尽量选取简单的背景  明亮的环境",IDC_STATIC,23,41,
+                    243,15
+    GROUPBOX        "帮助",IDC_STATIC,18,7,311,207
+    LTEXT           "1.   5s钟识别一次手势，请保证5s内做好手势等待识别  ",
+                    IDC_STATIC,24,16,243,15
+    LTEXT           "3.  如果无法对从摄像头获取的手势进行识别 请使用静态手势功能",
+                    IDC_STATIC,23,67,243,15
+    LTEXT           "4.  ‘#’表示无法识别的手势",IDC_STATIC,23,88,243,15
+END
+
+IDD_DIALOG_STATIC DIALOGEX 0, 0, 503, 216
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "手势识别——静态手势"
+FONT 8, "微软雅黑"
+BEGIN
+    CONTROL         "",IDC_STATICHAND,"Static",SS_BITMAP,18,19,13,11
+    PUSHBUTTON      "打开图片",IDC_OPEN,14,165,50,14,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "识别原始图像",IDC_BUTTON2,165,165,50,14,0,
+                    WS_EX_STATICEDGE
+    LISTBOX         IDC_LIST1,259,161,229,48,LBS_SORT | LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_STATICRESULT,"Static",SS_BITMAP,264,19,13,11
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,16,16,231,134
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKFRAME,261,16,229,134
+    PUSHBUTTON      "保存识别结果",IDC_BUTTON1,92,189,50,14,0,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "训练",IDC_BUTTON3,92,165,50,14,0,WS_EX_STATICEDGE
+    GROUPBOX        "",IDC_STATIC,13,157,240,52
+    GROUPBOX        "结果",IDC_STATIC,256,4,240,205
+    GROUPBOX        "待识别手势",IDC_STATIC,13,4,240,150
+    PUSHBUTTON      "识别二值图",IDC_BUTTON4,165,189,50,14
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "camera Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "camera\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2010\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "手势识别1.0.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "手势识别 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CAMERA_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 16
+        RIGHTMARGIN, 443
+        VERTGUIDE, 131
+        VERTGUIDE, 252
+        VERTGUIDE, 296
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 213
+        HORZGUIDE, 101
+        HORZGUIDE, 110
+        HORZGUIDE, 123
+        HORZGUIDE, 141
+    END
+
+    IDD_HELP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 384
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_DIALOG_STATIC, DIALOG
+    BEGIN
+        LEFTMARGIN, 13
+        RIGHTMARGIN, 496
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 209
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_CAMERA              REGISTRY DISCARDABLE    "Camera.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_A                   BITMAP  DISCARDABLE     "hand\\a.bmp"
+IDB_B                   BITMAP  DISCARDABLE     "hand\\b.bmp"
+IDB_BG                  BITMAP  DISCARDABLE     "res\\bg.bmp"
+IDB_BG2                 BITMAP  DISCARDABLE     "res\\bg2.bmp"
+IDB_BG3                 BITMAP  DISCARDABLE     "res\\bg3.bmp"
+IDB_BG4                 BITMAP  DISCARDABLE     "res\\bg4.bmp"
+IDB_BG1                 BITMAP  DISCARDABLE     "res\\bg1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "关于 camera(&A)..."
+    IDS_STRING102           "版本信息"
+    IDS_HELP                "帮助"
+END
+
+#endif    // Chinese (中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\camera.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,33 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: camera - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\LIDEGU~1\AppData\Local\Temp\RSP35D5.tmp" with contents
+[
+vfw32.lib winmm.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/camera.pdb" /debug /machine:I386 /nodefaultlib:"msvcrtd.lib" /out:"Debug/camera.exe" /pdbtype:sept 
+".\Debug\camera.obj"
+".\Debug\cameraDlg.obj"
+".\Debug\hand.obj"
+".\Debug\HelpDlg.obj"
+".\Debug\StaticHand.obj"
+".\Debug\StdAfx.obj"
+".\Debug\camera.res"
+]
+Creating command line "link.exe @C:\Users\LIDEGU~1\AppData\Local\Temp\RSP35D5.tmp"
+<h3>Output Window</h3>
+Linking...
+Creating command line "bscmake.exe /nologo /o"Debug/camera.bsc"  ".\Debug\StdAfx.sbr" ".\Debug\camera.sbr" ".\Debug\cameraDlg.sbr" ".\Debug\hand.sbr" ".\Debug\HelpDlg.sbr" ".\Debug\StaticHand.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+camera.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

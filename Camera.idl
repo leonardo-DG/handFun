@@ -1,0 +1,19 @@
+
+	// Camera.idl : IDL source for Camera.exe
+//
+// This file will be processed by the MIDL tool to
+// produce the type library (Camera.tlb) and marshalling code.
+import "oaidl.idl";
+import "ocidl.idl";
+[
+	uuid(E1841553-3A8B-4D35-9CAF-2F290D7B158D),
+	version(1.0),
+	helpstring("Camera 1.0 Type Library")
+]
+library CameraLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+};
+
+	

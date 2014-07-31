@@ -1,0 +1,38 @@
+# Microsoft Developer Studio Generated Dependency File, included by camera.mak
+
+.\camera.cpp : \
+	".\camera.h"\
+	".\cameraDlg.h"\
+	".\Hand.h"\
+	
+
+.\camera.rc : \
+	".\Camera.rgs"\
+	".\hand\a.bmp"\
+	".\hand\b.bmp"\
+	".\res\camera.rc2"\
+	".\res\Clock.ico"\
+	".\res\Globe.ico"\
+	
+
+.\cameraDlg.cpp : \
+	".\camera.h"\
+	".\cameraDlg.h"\
+	".\Hand.h"\
+	".\HelpDlg.h"\
+	
+
+.\hand.cpp : \
+	".\cameraDlg.h"\
+	".\Hand.h"\
+	
+
+.\HelpDlg.cpp : \
+	".\camera.h"\
+	".\HelpDlg.h"\
+	
+
+.\StdAfx.cpp : \
+	".\StdAfx.h"\
+	"c:\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	

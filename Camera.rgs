@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{4D706C74-F590-4765-A5AB-0F2E4BC8CB05} = s 'Camera'
+		'Camera.EXE'
+		{
+			val AppID = s {4D706C74-F590-4765-A5AB-0F2E4BC8CB05}
+		}
+	}
+}
